@@ -106,7 +106,7 @@ INSERT INTO product VALUES(2, 506, 203, 'textbooks');
 
 select * from product;
 
--- DEMONSTRATION
+-- DEMONSTRATION, of functions
 -- find all employees ordered by salary, descending
 SELECT * FROM employee
 ORDER BY salary DESC;
@@ -123,3 +123,14 @@ FROM employee;
 SELECT SUM(quantity), branch_id
 FROM product
 GROUP BY branch_id;
+
+-- DEMONSTRATION, of wildcards
+-- find all clients who are salons
+SELECT *
+FROM client
+WHERE client_name LIKE '%Salon';
+
+-- find the cliet id to whom stapler was sold
+SELECT client_id
+FROM product
+WHERE product_name LIKE '%stapler';
