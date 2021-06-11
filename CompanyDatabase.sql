@@ -105,3 +105,21 @@ INSERT INTO product VALUES(2, 505, 11, 'books');
 INSERT INTO product VALUES(2, 506, 203, 'textbooks');
 
 select * from product;
+
+-- DEMONSTRATION
+-- find all employees ordered by salary, descending
+SELECT * FROM employee
+ORDER BY salary DESC;
+
+-- find the average of all employees salary
+SELECT AVG(salary);
+
+-- find the total amount the book shop has to pay to its employees
+-- find the sum of employees salaries
+SELECT SUM(salary)
+FROM employee;
+
+-- find the total quantity of all products sold, arranged per branch
+SELECT SUM(quantity), branch_id
+FROM product
+GROUP BY branch_id;
