@@ -149,3 +149,12 @@ FROM client
 JOIN product
 ON client.client_id = product.client_id;
 
+-- DEMONSTRATION, nested queries
+-- find all clients who bought over 100 quantity
+SELECT client.client_name
+FROM client
+WHERE client.client_id IN (
+	SELECT product.client_id
+	FROM product
+	WHERE product.quantity >= 100
+);
