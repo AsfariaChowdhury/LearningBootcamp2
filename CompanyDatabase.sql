@@ -112,7 +112,8 @@ SELECT * FROM employee
 ORDER BY salary DESC;
 
 -- find the average of all employees salary
-SELECT AVG(salary);
+SELECT AVG(salary)
+FROM employee;
 
 -- find the total amount the book shop has to pay to its employees
 -- find the sum of employees salaries
