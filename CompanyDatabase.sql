@@ -134,3 +134,18 @@ WHERE client_name LIKE '%Salon';
 SELECT client_id
 FROM product
 WHERE product_name LIKE '%stapler';
+
+-- DEMOINSTRATION, of 'join'
+-- find all branches and the names of their managers
+-- inner join (normal join)
+SELECT employee.emp_id, employee.first_name, employee.last_name, branch.branch_name, branch.mgr_start_date AS manager_start_date
+FROM employee
+JOIN branch
+ON employee.emp_id = branch.mgr_id;
+
+-- client names and list of products
+SELECT client.client_id, client.client_name, product.quantity, product.product_name
+FROM client
+JOIN product
+ON client.client_id = product.client_id;
+
